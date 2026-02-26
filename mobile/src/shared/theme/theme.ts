@@ -1,5 +1,8 @@
+import { Platform } from "react-native";
 import { darkColorSchema } from "./darkColorSchema";
 import { ThemeType, TTextStyle } from "./ThemeType";
+
+type TFontWeight = "bold" | "semibold" | "regular";
 
 const defaultTextStyle: TTextStyle = {
   fontSize: 16,
