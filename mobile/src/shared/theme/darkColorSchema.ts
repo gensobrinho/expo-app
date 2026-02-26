@@ -1,15 +1,11 @@
 import { ThemeType } from "./ThemeType";
 
 export const darkColorSchema: ThemeType["colors"] = {
-  background: "#121212",
-  foreground: "#FFFFFF",
-  surface: "#1E1E1E",
-  primary: "#9f6ce7ff",
-
-  secondary: "#03DAC6",
-  text: "#FFFFFF",
-  border: "#ffffffde",
-  shadow: "#000000",
-  tabBarActiveTintColor: "#a87cdfff",
+  primary: '#6EF625',
+  secondary: '#F5F5F5',
+  background: '030303',
+  white: '#FFF',
+  lightGrey: '#666',
+  mediumGrey: '#2D2D2D',
   transparent: "transparent",
 };

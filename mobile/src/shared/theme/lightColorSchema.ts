@@ -1,14 +1,11 @@
 import { ThemeType } from "./ThemeType";
 
 export const lightColorSchema: ThemeType["colors"] = {
-  background: "#FFFFFF",
-  foreground: "#000000",
-  surface: "#F5F5F5",
-  primary: "#6200EE",
-  secondary: "#03DAC6",
-  text: "#000000",
-  border: "#00000027",
-  shadow: "#000000",
-  tabBarActiveTintColor: "#6200EE",
+  primary: '#6EF625',
+  secondary: '#F5F5F5',
+  background: '030303',
+  white: '#FFF',
+  lightGrey: '#666',
+  mediumGrey: '#2D2D2D',
   transparent: "transparent",
 };

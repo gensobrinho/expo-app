@@ -1,15 +1,12 @@
 // add/replace colors tokens as needed based on figma design
 export type ColorsType = {
-  background: string;
-  foreground: string;
-  surface: string;
   primary: string;
   secondary: string;
-  text: string;
-  border: string;
-  tabBarActiveTintColor: string;
+  background: string;
+  white: string;
+  lightGrey: string;
+  mediumGrey: string;
   transparent: string;
-  shadow: string;
 };
 
 export type TTextStyle = {
