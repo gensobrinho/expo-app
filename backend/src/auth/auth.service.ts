@@ -4,10 +4,10 @@ import { Injectable, UnauthorizedException } from '@nestjs/common';
 
 @Injectable()
 export class AuthService {
-    constructor(private UserService: UserService, private jwtService: JwtService){}
+    constructor(private readonly userService: UserService, private jwtService: JwtService){}
 
     async signIn(userId: number): Promise<{ access_token: string }>{
-        const userFounded = this.UserService.findOne(userId);
+        const userFounded = this.userService.findOne(userId);
 
         if(!userFounded){
             throw new UnauthorizedException();
