@@ -11,7 +11,10 @@ export const getDBConfig = (
   password: configService.get<string>('database.password'),
   database: configService.get<string>('database.name'),
   ssl: configService.get<boolean>('database.ssl')
-    ? { rejectUnauthorized: false }
+    ? {
+        rejectUnauthorized:
+          configService.get<boolean>('database.rejectUnauthorized') ?? true,
+      }
     : false,
   autoLoadEntities: true,
   synchronize: false,
