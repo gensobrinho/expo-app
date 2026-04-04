@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { resolve } from 'path';
+import { join } from 'path';
 import databaseConfiguration from './database.configuration';
 import { getDBConfig } from './db.config.factory';
 
@@ -10,7 +10,10 @@ import { getDBConfig } from './db.config.factory';
     ConfigModule.forRoot({
       load: [databaseConfiguration],
       isGlobal: true,
-      envFilePath: [resolve(process.cwd(), '.env'), resolve(process.cwd(), 'backend/.env')],
+      envFilePath: [
+        join(__dirname, '..', '..', '.env'),
+        join(__dirname, '..', '..', '..', '.env'),
+      ],
     }),
     TypeOrmModule.forRootAsync({
       inject: [ConfigService],
