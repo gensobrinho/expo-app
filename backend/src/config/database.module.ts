@@ -5,15 +5,15 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { getDBConfig } from './db.config.factory';
 
 @Module({
-    imports: [
-        ConfigModule.forRoot({
-            load: [databaseConfiguration],
-            isGlobal: true,
-        }),
-        TypeOrmModule.forRootAsync({
-            inject: [ConfigService],
-            useFactory: getDBConfig,
-        })
-    ]
+  imports: [
+    ConfigModule.forRoot({
+      load: [databaseConfiguration],
+      isGlobal: true,
+    }),
+    TypeOrmModule.forRootAsync({
+      inject: [ConfigService],
+      useFactory: getDBConfig,
+    }),
+  ],
 })
 export class DatabaseModule {}

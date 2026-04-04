@@ -1,0 +1,20 @@
+# env
+.env
+.env.*
+
+# node
+node_modules/
+
+# logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# build
+dist/
+build/
+
+# docker
+postgres_data/
